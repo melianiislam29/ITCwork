@@ -1,0 +1,310 @@
+/* CHALLENGE 01 - MY LITTLE PROFILE */
+
+:root {
+  --ink: #26344e;
+  --muted: #74849d;
+  --blue: #536dde;
+  --blue-dark: #4559c9;
+  --lavender: #e9e4ff;
+  --mint: #dcf8e9;
+  --peach: #ffe7d8;
+  --paper: #fff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #edf3ff;
+  color: var(--ink);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* ---------- Page ---------- */
+.page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 14px 40px;
+}
+
+/* big soft background circles */
+.page::before,
+.page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #d6e4fd;
+  z-index: 0;
+}
+.page::before {
+  width: 184px;
+  height: 184px;
+  top: 95px;
+  left: calc(50% - 454px);
+}
+.page::after {
+  width: 276px;
+  height: 276px;
+  top: 526px;
+  left: calc(50% + 236px);
+}
+
+.page > * { position: relative; z-index: 1; }
+
+.brand {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+
+.page-footer {
+  margin: 22px 0 0;
+  font-size: 11px;
+  font-weight: 700;
+  color: #8e98b0;
+  text-align: center;
+}
+
+/* ---------- Card ---------- */
+.profile-card {
+  background: var(--paper);
+  max-width: 425px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid #e6ebfa;
+  box-shadow: 0 20px 50px rgba(83, 109, 222, 0.18);
+}
+
+/* ---------- Cover ---------- */
+.cover {
+  position: relative;
+  height: 160px;
+  padding: 20px;
+  overflow: hidden;
+  color: white;
+  background: linear-gradient(135deg, #7b8ee8 0%, #9ea4f2 100%);
+}
+
+/* decorative circles */
+.cover::before,
+.cover::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.cover::before {
+  width: 200px;
+  height: 200px;
+  left: -58px;
+  bottom: -144px;
+}
+.cover::after {
+  width: 90px;
+  height: 90px;
+  top: -40px;
+  right: -20px;
+}
+
+.cover-label {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  z-index: 1;
+  padding: 6px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.cover-message {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  z-index: 1;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: right;
+  transform: rotate(-7deg);
+  transform-origin: right center;
+}
+
+/* ---------- Content ---------- */
+.profile-content {
+  padding: 0 32px 28px;
+  text-align: center;
+}
+
+.avatar {
+  display: block;
+  width: 116px;
+  height: 116px;
+  margin: -57px auto 0;
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+  border: 5px solid var(--paper);
+  background: var(--paper);
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(83, 109, 222, 0.2);
+}
+
+.availability {
+  display: block;
+  width: fit-content;
+  margin: 14px auto 0;
+  padding: 5px 13px;
+  border-radius: 999px;
+  background: #e4f8ec;
+  color: #1e8a56;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+#profile-name {
+  margin: 10px 0 0;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.username {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.bio {
+  margin: 14px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.bio strong { color: var(--ink); }
+
+/* ---------- Stats ---------- */
+.stats {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin-top: 22px;
+  padding: 16px 0;
+  border-top: 1px solid #e8ecf5;
+  border-bottom: 1px solid #e8ecf5;
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+}
+.stat + .stat { border-left: 1px solid #e8ecf5; }
+
+.stat strong {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.stat span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ---------- Interests ---------- */
+.interests h2 {
+  margin: 20px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tag {
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.tag-lavender { background: var(--lavender); color: #5b45b8; }
+.tag-mint     { background: var(--mint);     color: #1e8a56; }
+.tag-peach    { background: var(--peach);    color: #b0623a; }
+
+/* ---------- Button ---------- */
+.hello-button {
+  display: block;
+  margin-top: 24px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: var(--blue);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(83, 109, 222, 0.3);
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+.hello-button:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(83, 109, 222, 0.4);
+}
+.hello-button:focus-visible {
+  outline: 3px solid #b9c4ff;
+  outline-offset: 3px;
+}
+
+.little-note {
+  margin: 10px 0 0;
+  font-size: 10px;
+  color: #9aa3b8;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .page::before,
+  .page::after { display: none; }
+}
+
+@media (max-width: 390px) {
+  .page { padding: 36px 12px 28px; }
+  .profile-content { padding: 0 24px 24px; }
+  #profile-name { font-size: 24px; }
+  .stat strong { font-size: 18px; }
+}
+
+@media (max-width: 320px) {
+  .page { padding: 28px 10px 24px; }
+  .profile-content { padding: 0 18px 20px; }
+  .cover-message { font-size: 13px; }
+  .cover-label { font-size: 9px; padding: 5px 10px; }
+  #profile-name { font-size: 22px; }
+  .stat { padding: 0 4px; }
+  .stat strong { font-size: 16px; }
+  .stat span { font-size: 10px; }
+  .tag { padding: 6px 10px; font-size: 10px; }
+}
