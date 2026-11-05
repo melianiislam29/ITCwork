@@ -1,0 +1,103 @@
+/* CHALLENGE 04 – slightly harder, but still only basic CSS */
+body {
+  background-color: #E6F0DC;
+  color: #264737;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 25px 12px;
+}
+.shop { max-width: 960px; margin: 0 auto; }
+.plant { background-color: white; border: 2px solid #BDD2B7; margin: 15px; padding: 12px; }
+.plant img { width: 100%; }
+
+/* Header */
+.brand {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #3F6B4F;
+  margin: 20px 0 10px;
+}
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  margin: 0 0 14px;
+  color: #264737;
+}
+h1 em { color: #769B68; }
+.intro {
+  font-size: 18px;
+  color: #5F7F6B;
+  margin: 0 0 40px;
+}
+
+/* Cards side by side */
+.plants { font-size: 0; }  /* removes the gap between inline-blocks */
+.plant {
+  display: inline-block;
+  box-sizing: border-box;
+  width: calc(33.333% - 30px);
+  margin: 15px;
+  padding: 12px;
+  border-radius: 22px;
+  vertical-align: top;
+  text-align: left;
+  font-size: 16px;
+}
+.plant img {
+  display: block;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+.plant h2 {
+  font-size: 26px;
+  margin: 0 0 8px 6px;
+  color: #264737;
+}
+.plant p {
+  font-size: 15px;
+  color: #6B8577;
+  margin: 0 0 14px 6px;
+}
+.plant .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2F5D46;
+  margin-bottom: 18px;
+}
+.plant a {
+  display: block;
+  background-color: #2F5D46;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+.plant a:hover { background-color: #264737; }
+
+/* Slogan + footer */
+.slogan {
+  background-color: #FDF4CC;
+  max-width: 600px;
+  margin: 35px auto 25px;
+  padding: 22px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+footer {
+  font-size: 13px;
+  color: #6B8577;
+}
+
+/* BONUS: stack cards on phones */
+@media (max-width: 660px) {
+  h1 { font-size: 34px; }
+  .plant {
+    width: calc(100% - 30px);
+  }
+}
