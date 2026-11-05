@@ -1,0 +1,71 @@
+/* CHALLENGE 02 — basic CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFEBD3;
+  color: #513829;
+  margin: 0;
+  padding: 20px;
+}
+.recipe {
+  background-color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+img { width: 100%; }
+/* TODO: Style h1, h2, lists, info bar, tip and footer */
+h1 {
+font-family: Georgia, serif;
+font-size: 32px;
+ margin: 5px 0;
+} 
+ .recipe {
+  border: 2px solid #e8a77c;
+  border-radius: 16px;
+}
+
+.top-note {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #c8693a;
+}
+}
+h1 em {
+    color: #da6b2c;
+}
+.intro{
+    color: #896954;
+}
+img {
+    border-radius: 16px;
+}
+.info {
+  background-color: #fbeedd;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  color: #c8693a;
+  border-bottom: 1px solid #e8cbb5;
+  padding-bottom: 5px;
+}
+.tip {
+  background-color: #fae3bd;
+  border-left: 4px solid #d9773f;
+  padding: 12px;
+  font-size: 14px;
+}
+li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.footer {
+  text-align: center;
+  color: #c8693a;
+  font-weight: bold;
+}
